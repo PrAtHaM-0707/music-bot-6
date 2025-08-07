@@ -23,10 +23,6 @@
   "scripts": {
     "test": "src/sharding.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ScienceGear/Muzio.git"
-  },
   "keywords": [
     "discord",
     "music",
@@ -45,9 +41,5 @@
     "youtube-music"
   ],
   "author": "Science Gear",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ScienceGear/Muzio/issues"
-  },
-  "homepage": "https://github.com/ScienceGear/Muzio#readme"
+  "license": "MIT"
 }

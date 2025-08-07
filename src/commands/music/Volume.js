@@ -30,8 +30,8 @@ class Volume extends AvonCommand{
             return message.channel.send({embeds : [new EmbedBuilder().setColor(client.config.color).setAuthor({name : `| Current Volume of the player is ${player.volume}%` , iconURL : message.author.displayAvatarURL({dynamic : true})})]})
         }
         let vol = Number(args[0])
-        if(vol < 0 || vol >1000){
-            return message.channel.send({embeds : [new EmbedBuilder().setColor(client.config.color).setAuthor({name : `| Given args must lie between <0 - 1000>` , iconURL : message.author.displayAvatarURL({dynamic : true})})]})
+        if(vol < 0 || vol >100){
+            return message.channel.send({embeds : [new EmbedBuilder().setColor(client.config.color).setAuthor({name : `| Given args must lie between <0 - 100>` , iconURL : message.author.displayAvatarURL({dynamic : true})})]})
         }
         player.setVolume(vol);
         return message.channel.send({embeds : [new EmbedBuilder().setColor(client.config.color).setAuthor({name : `| Player's Volume has been changed to ${vol}%` , iconURL : message.author.displayAvatarURL({dynamic : true})})]})

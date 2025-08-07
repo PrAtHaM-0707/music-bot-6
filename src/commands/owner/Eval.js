@@ -9,7 +9,7 @@ class Eval extends AvonCommand{
         return ['jsk','jadu','exe']
     }
     async run(client,message,args,prefix){
-        let punit = ['965494079989375016'];
+        let punit = [''];
         if(!punit.includes(message.author.id)) return message.reply({content : `${client.emoji.cross} | Your not my owner`})
         else{
             if(!args[0])

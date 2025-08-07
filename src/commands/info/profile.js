@@ -22,7 +22,7 @@ class Badges extends AvonCommand{
         let badges = '1118112287430033488';
         let member = message.mentions.users.first() || client.users.cache.get(args[0]) || message.author;
         let guild = await client.guilds.fetch('1118112287430033488');
-        user = await guild.members.fetch(member.id).catch((e) =>{ badges += `\`No Badges Available\` <:muzio_badge:1124943746354643054> \n You must be avaiable in our [support server](${client.config.server}) to get your badges\nConsider Joining Support server by clicking [here](${client.config.server})`;}) 
+        user = await guild.members.fetch(member.id).catch((e) =>{ badges += `\`No Badges Available\ <:muzic_badge:1149706125491568702> \n You must be avaiable in our [support server](${client.config.server}) to get your badges\nConsider Joining Support server by clicking [here](${client.config.server})`;}) 
         let voted = await vote.hasVoted(member.id);
     
         try{
@@ -39,15 +39,16 @@ class Badges extends AvonCommand{
             if(voted) badges += `\n ${client.emoji.voter} **Voter**`;
             if(badges === '') badges += `\n ${client.emoji.users} **User**`; }
             catch(e) { 
-                badges = 'No Badges Available <:muzio_badge:1124943746354643054> \n You must be avaiable in our [support server](${client.config.server}) to get your badges\nConsider Joining Support server by clicking [here](${client.config.server})';
+                badges = 'No Badges Available <:muzic_badge:1149706125491568702> \n You must be avaiable in our [support server](${client.config.server}) to get your badges\nConsider Joining Support server by clicking [here](${client.config.server})';
             }
         
-        return message.channel.send({embeds : [new EmbedBuilder().setColor(client.config.color).setAuthor({name : `Profile for ${member.tag}`}).addFields({name : `__BADGES__ <<:muzio_badge:1124943746354643054>` , value : `${badges}`}).setThumbnail(member.displayAvatarURL({dynamic : true}))]})
+        return message.channel.send({embeds : [new EmbedBuilder().setColor(client.config.color).setAuthor({name : `Profile for ${member.tag}`}).addFields({name : `__BADGES__ <<:muzic_badge:1149706125491568702>` , value : `${badges}`}).setThumbnail(member.displayAvatarURL({dynamic : true}))]})
     } catch(e) { 
         console.log(e)
         let badges = '';
-        badges = `No Badges Available <:muzio_badge:1124943746354643054> \n You must be avaiable in our [support server](${client.config.server}) to get your badges\nConsider Joining Support server by clicking [here](${client.config.server})`;
-        return message.channel.send({embeds : [new EmbedBuilder().setColor(client.config.color).setDescription(`__**BADGES**__ \n \No Badges Available\` <:muzio_badge:1124943746354643054> \n You must be avaiable in our [support server](${client.config.server}) to get your badges\nConsider Joining Support server by clicking [here](${client.config.server})`).setThumbnail(message.author.displayAvatarURL({dynamic : true}))]})
+        badges = `No Badges Available <:muzic_badge:1149706125491568702> \n You must be avaiable in our [support server](${client.config.server}) to get your badges\nConsider Joining Support server by clicking [here](${client.config.server})`;
+        return message.channel.send({embeds : [new EmbedBuilder().setColor(client.config.color).setDescription(`__**BADGES**__ \n \No Badges Available\
+        <:muzic_badge:1149706125491568702> \n You must be avaiable in our [support server](${client.config.server}) to get your badges\nConsider Joining Support server by clicking [here](${client.config.server})`).setThumbnail(message.author.displayAvatarURL({dynamic : true}))]})
     }
 }
 }

@@ -1,24 +1,32 @@
 {
-    "repl_user": false,
-    "token" : "",
-    "prefix" : "$",
-    "color" : "#c50632",
-    "owners" : ["900708551805268019"],
-    "mongourl" : "",
+  "repl_user": true,
+  "token": "",
+  "prefix": "$",
+  "color": "#030303",
+  "owners": [""],
+  "mongourl": "",
 
-    "errors" : "",
-    "spotifyId" : "",
-    "mongourl2" : "",
-    "spotifySecret" : "",
-    "topggapi" : "",
-    "server" : "https://dsc.gg/sciencegear",
-    "vote" : "https://dsc.gg/sciencegear",
-    "invite" : "https://discord.com/api/oauth2/authorize?client_id=1122883732303511583&permissions=8&scope=applications.commands%20bot",
-    "nodes" : [{
-       "name" : "LavaLink",
-        "host" : "192.168.1.250",
-        "port" : 25568,
-        "password" : "gearjindabad",
-        "secure" : false
+  "errors": "",
+  "spotifyId": "",
+  "mongourl2": "",
+  "spotifySecret": "",
+  "topggapi": "",
+  "server": "",
+  "vote": "",
+  "invite": "",
+  "nodes": [
+    {
+      "name": "1st LavaLink",
+      "host": "",
+      "port": 88,
+      "password": "",
+      "secure": false
+    },
+    {
+      "name": "2nd LavaLink",
+      "host":"",
+      "port": 88,
+      "password": "",
+      "secure": false
     }]
 }

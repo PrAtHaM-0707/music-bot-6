@@ -20,8 +20,8 @@ class Invite extends AvonCommand{
             iconURL: client.user.displayAvatarURL()})
           .addFields(
             {
-              name: "Invite Muzio",
-              value: `[**Muzio**](${client.config.invite})`
+              name: "Invite Muzic",
+              value: `[**Muzic**](${client.config.invite})`
             },
             {
               name: "Need Help",
@@ -29,7 +29,7 @@ class Invite extends AvonCommand{
             }
           ).setTimestamp(currentTime).setThumbnail(client.user.displayAvatarURL());
           let r = new ActionRowBuilder().addComponents(
-            new ButtonBuilder().setStyle(ButtonStyle.Link).setURL(`https://discord.com/api/oauth2/authorize?client_id=1122883732303511583&permissions=8&scope=applications.commands%20bot`).setLabel(`Invite`),
+            new ButtonBuilder().setStyle(ButtonStyle.Link).setURL(`https://discord.com/api/oauth2/authorize?client_id=1149585092478513214&permissions=137476565393&scope=bot`).setLabel(`Invite`),
             new ButtonBuilder().setStyle(ButtonStyle.Link).setURL(client.config.server).setLabel(`Support Server`)
         );        
         return message.channel.send({embeds : [e] , components : [r]});
